@@ -65,3 +65,15 @@ const calucator = {
 console.log(calucator.add(12, 12));
 console.log(calucator.subtract(120, 98));
 console.log(calucator.multiply(12, 12));
+
+
+// use of this keyword in objects : This refer to the current context
+
+const myNewUser = {
+    name: "Muhammad Shakir",
+    greetings: function () { 
+        return `Hello ${this.name}! Welcome to JS World`;
+    }
+}
+
+console.log(myNewUser.greetings());
