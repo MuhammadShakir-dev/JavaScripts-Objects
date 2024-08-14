@@ -6,7 +6,7 @@
     <title>02 DOM</title>
 
     <style>
-        
+
         body{
             background-color: #2f2f2f;
             box-sizing: border-box;
@@ -14,9 +14,50 @@
             padding: 0%;
         }
 
+        .parent{
+            color: white;
+        }
     </style>
 </head>
 <body>
-    
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div>
 </body>
+
+<script>
+
+    // const mainDiv = document.querySelector('.parent').children;
+    // const convertArray  =  Array.from(mainDiv);
+    // console.log(convertArray);
+
+    // convertArray.forEach((values) => {
+    //     values.style.color = 'yellow';
+    //     values.style.padding = '10px'
+    // })
+    
+
+    const mainDiv = document.querySelector('.parent');
+
+    for(let i = 0; i < mainDiv.children.length; i++){
+        // console.log(mainDiv.children[i].innerHTML);
+    }
+
+    // to know to the first child element
+    console.log(mainDiv.firstElementChild.innerText);
+
+    // to know to the last child element
+    console.log(mainDiv.lastElementChild.innerText);
+
+    // to know to the parent element
+    const childsss  = document.querySelector('.day');
+    console.log(childsss.parentElement);
+
+    // to know about siblings
+    console.log(childsss.nextElementSibling);
+</script>
 </html>
