@@ -17,6 +17,14 @@
         .parent{
             color: white;
         }
+
+        .main{
+            width: 400px;
+            height: 400px;
+            background-color: orange;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -59,5 +67,14 @@
 
     // to know about siblings
     console.log(childsss.nextElementSibling);
+
+    // creating and appending new elements 
+    const myNewDiv = document.createElement('div');
+    myNewDiv.setAttribute('class','main');
+    document.body.appendChild(myNewDiv)
+
+    // to remove this child
+    document.body.removeChild(myNewDiv)
+    
 </script>
 </html>
