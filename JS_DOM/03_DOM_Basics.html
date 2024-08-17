@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 3</title>
+
+    <style>
+
+        body{
+            background-color: #2f2f2f;
+            color: white;
+            box-sizing: border-box;
+            padding: 0%;
+            margin: 0%;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <ul class="langList">
+        <li>JavaScript</li>
+    </ul>
+
+    <div class="buttonDiv">
+
+    </div>
+</body>
+
+<script>
+    
+    const myDiv = document.querySelector('.buttonDiv');
+    const myUl = document.querySelector('ul');
+
+    // write a function to add items in the ul 
+    function addingLangs(langs){
+        const list = document.createElement('li');
+        list.innerHTML = langs;
+        myUl.appendChild(list)
+    }
+
+    // addingLangs('Python');
+    // addingLangs('Typescript');
+
+    // do the same work again but with better approch
+    
+    const addingNewLangs = (langs) => {
+        const list = document.createElement('li')
+        list.appendChild(document.createTextNode(langs))     
+        myUl.appendChild(list)
+    }
+
+    addingNewLangs('Python');
+    addingNewLangs('Go lang');
+
+    // for(let i = 1; i <= 100; i++){
+    //     const newBTN = document.createElement('button');
+    //     newBTN.appendChild(document.createTextNode('click me'))
+    //     myDiv.appendChild(newBTN)
+    // }
+
+    // Edit
+    // replace Python -> Typescript
+
+    const py = document.querySelector('li:nth-child(2)');
+    const newLi = document.createElement('li');
+    newLi.appendChild(document.createTextNode('TypeScript'));
+    py.replaceWith(newLi)
+
+    const replacingLangs = (langName, replacingPosition) => {
+        const selectingLi  = document.querySelector(`li:nth-child(${replacingPosition})`)
+        const newLi = document.createElement('li')
+        newLi.appendChild(document.createTextNode(`${langName}`))
+        selectingLi.replaceWith(newLi)
+    }
+
+    replacingLangs('Rust',3)
+
+    
+    
+</script>
+</html>
