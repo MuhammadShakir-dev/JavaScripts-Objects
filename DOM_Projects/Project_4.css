@@ -1,0 +1,103 @@
+.raleway{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.raleway{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    background-color: #6482AD;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Raleway", sans-serif; ;
+}
+
+
+.container {
+    width: 700px;
+    color: #E2DAD6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #7FA1C3;
+    box-shadow: 10px 10px #405c85;
+}
+
+.container p {
+    margin: 5px 0px;
+}
+
+.container h1{
+    font-weight: 600;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 50px 0px;
+}
+
+form label {
+    display: block;
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+form input {
+    width: 80%;
+    height: 50px;
+    padding-left: 20px;
+    background-color: #E2DAD6;
+    border: none;
+    border-radius: 10px;
+}
+
+form #submitguess {
+    width: 40%;
+    border-radius: 100px;
+    font-size: 20px;
+    background-color:#6482AD ;
+    color: #E2DAD6;
+    outline: none;
+    cursor: pointer;
+    height: 55px;
+}
+
+.resultParas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.button {
+    width: 60%;
+    border-radius: 100px;
+    font-size: 20px;
+    background-color:#6482AD ;
+    color: #E2DAD6;
+    outline: none;
+    cursor: pointer;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
