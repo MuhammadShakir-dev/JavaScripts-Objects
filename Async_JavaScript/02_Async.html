@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+
+    <style>
+        body{
+            background-color: #2f2f2f;
+        }
+
+        .clockContainer{
+            width: 400px;
+            height: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: orange;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        .clockContainer .displayTime{
+            background-color: #2f2f2f;
+            width: 80%;
+            height: 80px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        #start{
+            margin-top: 10px;
+            padding: 10px;
+            width: 60%;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #stop{
+            margin-top: 10px;
+            padding: 10px;
+            width: 60%;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="clockContainer">
+        <div class="displayTime"></div>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </div>
+
+</body>
+
+    <script>
+
+        let showTime = document.querySelector('.displayTime');
+        let startBtn = document.querySelector('#start');
+        let stopBtn = document.querySelector('#stop');
+        let time;
+        
+        startBtn.addEventListener('click', () => {
+            time = setInterval(() =>  {
+                let date = new Date();
+                showTime.innerHTML = `${date.toLocaleTimeString()}`
+            }, 1000);
+        })
+
+        stopBtn.addEventListener('click', () => {
+            clearInterval(time)
+        })
+    
+    </script>
+</html>
