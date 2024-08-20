@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            transition: all 1s ease;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            width: 100px;
+            height: 50px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Background Color Changer</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+
+    let startBtn = document.querySelector('#start')
+    let stopBtn = document.querySelector('#stop')
+    let body = document.querySelector('body')
+
+    let startChange;
+
+    startBtn.addEventListener('click',() => {
+        startChange = setInterval(() => {
+            let r = parseInt(Math.random() * 255 + 1)
+            let g = parseInt(Math.random() * 255 + 1)
+            let b = parseInt(Math.random() * 255 + 1)
+            let rgb = `rgb(${r},${g},${b})`
+            body.style.backgroundColor = `${rgb}`
+            console.log(rgb);
+        }, 1000)
+    })
+
+    stopBtn.addEventListener('click', () => {
+        clearInterval(startChange)
+    })
+
+</script>
+</html>
