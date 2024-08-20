@@ -39,7 +39,8 @@
     let startChange;
 
     startBtn.addEventListener('click',() => {
-        startChange = setInterval(() => {
+        if(!startChange){
+            startChange = setInterval(() => {
             let r = parseInt(Math.random() * 255 + 1)
             let g = parseInt(Math.random() * 255 + 1)
             let b = parseInt(Math.random() * 255 + 1)
@@ -47,10 +48,12 @@
             body.style.backgroundColor = `${rgb}`
             console.log(rgb);
         }, 1000)
+        }
     })
 
     stopBtn.addEventListener('click', () => {
         clearInterval(startChange)
+        startChange = null
     })
 
 </script>
