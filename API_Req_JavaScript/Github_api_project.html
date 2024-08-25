@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Users</title>
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+            background-color: #f1faee;
+            font-family: "Inter", sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mainContainer{
+            width: 80%;
+            height: 800px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input{
+            width: 800px;
+            height: 70px;
+            border-radius: 5px;
+            padding-left: 20px;
+            border: none;
+            outline: none;
+            font-family: "Inter", sans-serif;
+            margin-bottom: 30px;
+        }
+
+        .userInfoContainer{
+            width: 50%;
+            height: 400px;
+            background-color: white;
+            display: flex;
+            border-radius: 20px;
+        }
+
+        .profilePic{
+            width: 35%;
+            height: 100%;
+            background-color: aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profilePic .imgContainer{
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            background-size: cover;
+        }
+
+        .profilePic{
+            border-radius: 20px;
+            background-color: white;
+        }
+
+        .info {
+            width: 65%;
+            background-color: aquamarine;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+
+        .otherInfo{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mainContainer">
+        <form action="#">
+            <input type="text" id="userInput" placeholder="Search a GitHub User">
+        </form>
+
+        <div class="userInfoContainer">
+            <div class="profilePic">
+            </div>
+
+            <div class="info">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="Github_api_project.js"></script>
+</html>
