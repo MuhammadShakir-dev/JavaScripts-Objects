@@ -97,7 +97,7 @@ consumedPromiseFive()
 //             const response = await fetch('https://api.github.com/users/MuhammadShakir-dev');
 //             const data = await response.json();
 //             console.log(data);
-//         }
+//         }https://v6.exchangerate-api.com/v6/05bf1feff57906271cfe6bae/latest/USD
         
 //         getUserInfo()
 //     }
