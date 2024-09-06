@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <!--Custome CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Google fonts - Poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap" rel="stylesheet">
+
+   
+</head>
+<body>
+    <h1>Weather App</h1>
+    <div class="container">
+
+        <div class="search-container">
+            <input type="text" placeholder="Enter city name" class="searchInput">
+            <button>Search</button>
+        </div>
+
+        <div class="weather">
+            <img src="./Images/sun.png" alt="WeatherIcon" class="weatherIcon">
+            <h1 class="temp">31°c</h1>
+            <h2 class="city">Karachi</h2>
+        </div>
+
+        <div class="weatherDetails">
+            <div class="col1">
+                <img src="./Images/humidity.png" alt="">
+                <div>
+                    <p class="humidity">50%</p>
+                    <p>Humidity</p>
+                </div>
+            </div>
+
+            <div class="col2">
+                <img src="./Images/wind.png" alt="">
+                <div>
+                    <p class="windSpeed">15 kmph</p>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
