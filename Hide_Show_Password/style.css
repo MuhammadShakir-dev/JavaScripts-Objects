@@ -1,0 +1,40 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    background-color: #250057;
+    
+}
+
+.container{
+    width: 700px;
+    height: 75px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    border-radius: 5px;
+}
+
+.container input{
+    width: 80%;
+    height: 100%;
+    padding: 0px 0px 0px 20px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+}
+
+.container img{
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: all 0.7s ease;
+}
